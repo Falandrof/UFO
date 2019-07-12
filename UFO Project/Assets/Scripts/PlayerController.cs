@@ -32,8 +32,7 @@ public class PlayerController : MonoBehaviour {
         Vector2 movement = new Vector2 (moveHorizontal, moveVertical);
 
         rb2d.AddForce (movement * speed);
-
-
+    
     }
 
     void OnTriggerEnter2D(Collider2D other) 
@@ -54,4 +53,15 @@ public class PlayerController : MonoBehaviour {
         if (count >= 12)
             winText.text = "You win!";
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }
+
+
+    
